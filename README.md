@@ -31,7 +31,7 @@ To compile
 To run  
 `dbt run`  
 
-
+In the free version there is no option to change the project name or the git branch before running the tasks.  
 
 Useful Links:  
 [Dbt cloud cli documentation](https://docs.getdbt.com/docs/cloud/cloud-cli-installation?install=pip#install-dbt-cloud-cli-in-pip)   
