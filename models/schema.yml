@@ -34,3 +34,18 @@ models:
           - relationships:
               to: ref('stag_customers')
               field: customer_id
+  - name: stag_suppliers
+    description: This model clean supplier data
+    config:
+      # Basic Configs
+      materialized: incremental
+      # unique_key: id
+      incremental_strategy: merge
+      # Advanced Configurations
+      on_schema_change: "sync_all_columns" 
+    columns:
+      - name: supplier_id
+        description: This model cleans up customer data
+        tests:
+          - unique
+          - not_null
